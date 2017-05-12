@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cabinet</title>
+<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body class="top">
+<div class="file_modal">
+<a href="#" class="close"></a>
+  <div>
+    <label>File Name</label>
+    <input type="text">
+  </div>
+  <div>
+    <label>File Type</label>
+    <select>
+      <option>Document</option>
+      <option>Device</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <button>Add</button>
+</div>
+<div class="search_modal"><a href="#" class="close"></a>
+  <h3>3 Search Results for DocumentName</h3>
+  <ul>
+    <li>
+      <div>DocumentName <i> (location cabinet1 level1)</i></div>
+    </li>
+    <li>
+      <div>DocumentName <i> (location cabinet1 level1)</i></div>
+    </li>
+    <li>
+      <div>DocumentName <i> (location cabinet1 level1)</i></div>
+    </li>
+  </ul>
+</div>
+<div class="history_modal"><a href="#" class="close"></a>
+  <h1>History</h1>
+  <ul>
+    <li>
+      <h3>2/1/2017</h3>
+      <ul>
+        <li>
+          <time>3:00pm</time>
+          <div>DocumentName <i> (moved from cabinet1 level1 to cabinet2 level1)</i></div>
+          <div><span>Last Edited by: UserName</span></div>
+        </li>
+        <li>
+          <time>4:00pm</time>
+          <div>DocumentName <i> (moved from cabinet1 level1 to cabinet2 level1)</i></div>
+          <div><span>Last Edited by: UserName</span></div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3>2/2/2017</h3>
+      <ul>
+        <li>
+          <time>10:00am</time>
+          <div>DocumentName<i> (moved from cabinet2 level1 to cabinet2 level1)</i></div>
+          <div><span>Last Edited by: UserName</span></div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="reg_modal"><a href="#" class="close"></a>
+  <h1>Registration</h1>
+  <div>
+    <label>Username</label>
+    <input type="text">
+  </div>
+  <div>
+    <label>Password</label>
+    <input type="password">
+  </div>
+  <div>
+    <label>Retype-Password</label>
+    <input type="password">
+  </div>
+  <div>
+    <label>User Type</label>
+    <select>
+      <option>Administrator</option>
+      <option>Member</option>
+    </select>
+  </div>
+  <button>Register</button>
+</div>
+<header>
+  <div class="search">
+    <button id="searchBtn"></button>
+    <input type="text" id="searchInput">
+  </div>
+  <div class="username"><span>Logged in as: </span>UserName</div>
+  <nav>
+    <ul>
+      <li>
+        <button id="history">History</button>
+      </li>
+      <li>
+        <button id="reg">Member Registration</button>
+      </li>
+    </ul>
+  </nav>
+  <div class="delete" id="del">Drag Items Here to Delete</div>
+</header>
+<div class="clear">
+  <div class="list">
+    <button class="addDoc">Add File</button>
+    <h2>List</h2>
+    <ul>
+      <li id="doc1" draggable="true"><span class="icon1"></span>Document 1</li>
+      <li id="doc2" draggable="true"><span class="icon1"></span>Document 2</li>
+      <li id="doc3" draggable="true"><span class="icon1"></span>Document 3</li>
+      <li id="doc4" draggable="true"><span class="icon1"></span>Document 4</li>
+      <li id="doc5"draggable="true"><span class="icon1"></span>Document 5</li>
+    </ul>
+  </div>
+  <div class="cabinet_container">
+    <button class="add" id="addCab">Add Cabinet</button>
+    <div class="clear"></div>
+    <!--<div class="cab">
+      <h3>Cabinet 1</h3>
+      <button class="addLevel">Add Level</button>
+      <ul>
+        <li>
+          <ul>
+            <li><span class="icon1"></span>Document</li>
+            <li><span class="icon1"></span>Document 2</li>
+            <li><span class="icon1"></span>Document 3</li>
+            <li><span class="icon1"></span>Document 4</li>
+            <li><span class="icon1"></span>Document 5</li>
+            <li><span class="icon1"></span>Document</li>
+            <li><span class="icon1"></span>Document 2</li>
+            <li><span class="icon1"></span>Document 3</li>
+            <li><span class="icon1"></span>Document 4</li>
+            <li><span class="icon1"></span>Document 5</li>
+          </ul>
+        </li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>--> 
+  </div>
+</div>
+</body>
+</html>

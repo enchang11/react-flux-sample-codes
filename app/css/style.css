@@ -1,0 +1,580 @@
+body {
+	background: #bac3b1;
+	font-family: Arial, Helvetica, sans-serif, "Meiryo UI";
+	font-size: 13px;
+}
+body.top {
+	background: #FFF;
+}
+.login {
+	position: absolute;
+	width: 400px;
+	height: 220px;
+	left: 50%;
+	top: 50%;
+	margin: -110px 0 0 -200px;
+	border-radius: 3px;
+	background: #FFF;
+	border: 4px solid #374830;
+}
+.login input {
+	display: block;
+	height: 40px;
+	width: 360px;
+	padding: 0 10px;
+	border-radius: 3px;
+	font-size: 16px;
+	margin: 20px auto 0 auto;
+	background: #bbc1b8;
+	text-align: center;
+	font-weight: bold;
+	color: #374730;
+}
+.login .error {
+	height:20px;
+	line-height:20px;
+	color:#F00;
+	font-size:12px;
+	text-align:center;
+	margin:5px 0 0 0;
+}
+.login button {
+	height: 50px;
+	margin: 5px auto;
+	display: block;
+	width: 120px;
+	line-height: 50px;
+	border-radius: 3px;
+	border: none;
+	background: #93974f;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFF;
+}
+.login button:hover {
+	background:#71743d;
+}
+.login_icon {
+	background: url(../images/login_icon.png);
+	width: 133px;
+	height: 177px;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin: 0 0 20px -67px;
+}
+.clear {
+	display: block;
+}
+.clear:before {
+	display: block;
+	width: 100%;
+	clear: both;
+	content: '';
+	height: 0;
+	overflow: hidden;
+}
+.clear:after {
+	display: block;
+	width: 100%;
+	clear: both;
+	content: '';
+	height: 0;
+	overflow: hidden;
+}
+/*header*/
+header {
+	display: block;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	background: #bac3b1;
+}
+.search {
+	float: left;
+	height: 60px;
+}
+.search button {
+	float: left;
+	width: 60px;
+	height: 60px;
+	border: none;
+	background: #374730;
+	padding: 0;
+}
+.search button:hover {
+	background: #59734f;
+}
+.search button:before {
+	display: block;
+	float: left;
+	background: url(../images/search_icon.png);
+	width: 47px;
+	height: 47px;
+	content: '';
+	margin: 3px 0 0 7px;
+}
+.search input {
+	border-radius: 3px;
+	width: 0;
+	height: 50px;
+	float: left;
+	margin: 5px 10px;
+	padding: 0 0;
+	font-size: 14px;
+	overflow: hidden;
+	transition: all ease-in-out .6s;
+}
+.search input.active {
+	width: 280px;
+	padding: 0 10px;
+}
+button.logout {
+	float: right;
+	height: 60px;
+	border: none;
+	background: #374730;
+	padding: 0;
+	margin:0 0 0 20px;
+	line-height:60px;
+	padding:0 10px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+button.logout:before {
+	display: inline-block;
+	vertical-align:middle;
+	background: url(../images/logout_icon.png);
+	width: 33px;
+	height: 40px;
+	content: '';
+	margin:0 10px 0  0;
+}
+button.logout:hover {
+	background: #59734f;
+}
+.username {
+	padding: 0 20px 0 10px;
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+}
+.username span {
+	font-size: 12px;
+	color: #718062;
+	padding: 0 5px 0 0;
+}
+/*icons*/
+.icon1 {
+	display: inline-block;
+	margin: 0 5px;
+	background: url(../images/doc_icon.png) center no-repeat;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+/*----*/
+.list {
+	float: left;
+	padding: 20px;
+	width: 300px;
+	background: #ebede9;
+}
+.list h2 {
+	font-size: 18px;
+	margin: 0 0 20px 0;
+}
+.list li {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	border-bottom: 1px dashed #ccc;
+}
+.list li:hover {
+	background: #e4e4e4;
+	cursor: move;
+}
+.cabinet_container {
+	float: left;
+	padding: 20px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+button.add {
+	background: none;
+	height: 30px;
+	line-height: 28px;
+	border: 1px solid #374730;
+	padding: 0 10px;
+	font-size: 14px;
+	border-radius: 3px;
+}
+button:hover {
+	background: #e0e8dd;
+}
+button.add:before {
+	background: url(../images/add_icon.png);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+	content: '';
+}
+.cab {
+	float: left;
+	margin: 10px;
+	position: relative;
+	width: 300px;
+	padding: 30px 0 0 0;
+	background: #3b4d29;
+}
+.cab h3 {
+	color: #FFF;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0 10px;
+	line-height: 30px;
+}
+.cab .addLevel {
+	position: absolute;
+	z-index: 10;
+	right: 5px;
+	top: 5px;
+	height: 20px;
+	border: none;
+	width: 80px;
+	font-size: 12px;
+	border-radius: 3px;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.6);
+}
+.cab .deleteCab {
+	position: absolute;
+	z-index: 10;
+	right: 90px;
+	top: 5px;
+	height: 20px;
+	border: none;
+	width: 80px;
+	font-size: 12px;
+	border-radius: 3px;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.6);
+}
+.cab > ul > li {
+	width: 300px;
+	height: 110px;
+	display: block;
+	background: #e2ebd9;
+	overflow: hidden;
+	border: 2px solid #3b4d29;
+	position: relative;
+}
+.cab > ul > li > ul {
+	width: 100%;
+	overflow: auto;
+	height: 110px;
+}
+.cab > ul > li > ul > li {
+	float: left;
+	width: 50%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	height: 30px;
+	line-height: 30px;
+}
+.cab > ul > li:before {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	content: '';
+	border-right: 1px solid #3b4d29;
+	background: #718062;
+	transition: all .3s ease-in-out;
+}
+.cab > ul > li:after {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	right: 0;
+	top: 0;
+	content: '';
+	border-left: 1px solid #3b4d29;
+	background: #718062;
+	transition: all .3s ease-in-out;
+}
+.cab > ul > li.active:before {
+	left: -100%;
+}
+.cab > ul > li.active:after {
+	right: -100%;
+}
+/*navigation*/
+
+nav {
+	float: left;
+}
+nav li {
+	float: left;
+	padding: 0 10px;
+}
+nav li button {
+	width: 150px;
+	text-align: center;
+	border: none;
+	border-radius: 4px;
+	height: 30px;
+	line-height: 30px;
+	background: #719263;
+	color: #FFF;
+}
+nav li button:hover {
+	background: #5f7b53;
+}
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/*modals*/
+.history_modal {
+	background: #FFF;
+	width: 480px;
+	height: 320px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 20;
+	margin: -160px 0 0 -240px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+	padding: 10px;
+	overflow: auto;
+	display:none;
+}
+.history_modal .close {
+	float: right;
+	margin: 5px 5px 0 0;
+	background: url(../images/close_btn.png);
+	width: 16px;
+	height: 16px;
+}
+.history_modal > ul > li {
+	border-bottom: 1px dashed #CCC;
+	padding: 5px;
+}
+.history_modal > ul > li > ul {
+	padding: 5px 0 5px 10px;
+}
+.history_modal > ul > li > ul > li {
+	padding: 5px 0;
+}
+.history_modal > ul > li > ul > li > time {
+	font-size: 12px;
+	color: #719263;
+}
+.history_modal > ul > li > ul > li span {
+	font-size: 12px;
+	color: #999;
+}
+.history_modal > ul > li > ul > li i {
+	font-size: 12px;
+	color: #999;
+}
+
+
+.reg_modal {
+	background: #FFF;
+	width: 480px;
+	height: 320px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 20;
+	margin: -160px 0 0 -240px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+	padding: 10px;
+	overflow: auto;
+	display:none;
+}
+.reg_modal .close {
+	float: right;
+	margin: 5px 5px 0 0;
+	background: url(../images/close_btn.png);
+	width: 16px;
+	height: 16px;
+}
+.reg_modal div:before,.reg_modal div:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+.reg_modal div {
+	padding:10px;
+}
+.reg_modal label {
+	float:left;
+	height:30px;
+	line-height:30px;
+	width:150px;
+}
+.reg_modal input[type=text],.reg_modal input[type=password],.reg_modal select {
+	float:left;
+	height:30px;
+	line-height:30px;
+	width:200px;
+	border:1px solid #666;
+	padding:0 5px;
+	border-radius:3px;
+}
+.reg_modal button {
+	height: 30px;
+	margin: 10px auto;
+	display: block;
+	width: 120px;
+	line-height: 30px;
+	border-radius: 3px;
+	border: none;
+	background: #93974f;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+}
+.reg_modal button:hover {
+	background:#71743d;
+}
+
+.search_modal {
+	background: #FFF;
+	width: 480px;
+	height: 320px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 20;
+	margin: -160px 0 0 -240px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+	padding: 10px;
+	overflow: auto;
+	display:none;
+}
+.search_modal .close {
+	float: right;
+	margin: 5px 5px 0 0;
+	background: url(../images/close_btn.png);
+	width: 16px;
+	height: 16px;
+}
+.search_modal > ul > li {
+	border-bottom: 1px dashed #CCC;
+	padding: 5px;
+}
+.search_modal  i {
+	font-size: 12px;
+	color: #999;
+}
+.delete {
+	float:left;
+	border:1px dashed #8c9b7d;
+	background:#d8ddd2;
+	padding:0 20px;
+	height:40px;
+	line-height:40px;
+	margin:10px 0 0 20px;
+	border-radius:6px;
+}
+
+
+.addDoc {
+	float:right;
+	border:1px solid #374730;
+	border-radius:3px;
+	height:20px;
+	background:#FFF;
+}
+
+.file_modal {
+	background: #FFF;
+	width: 480px;
+	height: 190px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 20;
+	margin: -85px 0 0 -240px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+	padding: 10px;
+	overflow: auto;
+	display:none;
+	z-index:20;
+}
+
+.file_modal div:before,.file_modal div:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+.file_modal div {
+	padding:10px;
+}
+.file_modal label {
+	float:left;
+	height:30px;
+	line-height:30px;
+	width:150px;
+}
+.file_modal button {
+	height: 30px;
+	margin: 10px auto;
+	display: block;
+	width: 120px;
+	line-height: 30px;
+	border-radius: 3px;
+	border: none;
+	background: #93974f;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+}
+.file_modal input,.file_modal select {
+	float:left;
+	height:30px;
+	line-height:30px;
+	width:200px;
+	border:1px solid #666;
+	padding:0 5px;
+	border-radius:3px;
+}
+.file_modal .close {
+	float: right;
+	margin: 5px 5px 0 0;
+	background: url(../images/close_btn.png);
+	width: 16px;
+	height: 16px;
+}
+
+
+.overlay {
+	position:fixed; 
+	width:100%; 
+	height:100%; 
+	left:0; 
+	top:0; 
+	background:rgba(255,255,255,0.5); 
+	z-index:1;
+}

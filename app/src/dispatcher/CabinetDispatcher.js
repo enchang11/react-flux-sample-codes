@@ -1,11 +1,9 @@
-"use strict";
-
-var NwaaDemoConstants = require('../constants/NwaaDemoConstants');
 var Dispatcher = require('flux').Dispatcher;
 var assign = require('object-assign');
-var PayloadSources = NwaaDemoConstants.PayloadSources;
+var CabinetConstants = require('../constants/CabinetConstants');
+var PayloadSources = CabinetConstants.PayloadSources;
 
-var NwaaDemoDispatcher = assign(new Dispatcher(), {
+var CabinetDispatcher = assign(new Dispatcher(), {
 
     handleMessage: function (action) {
         this.dispatch({
@@ -23,4 +21,4 @@ var NwaaDemoDispatcher = assign(new Dispatcher(), {
 
 });
 
-module.exports = NwaaDemoDispatcher;
+module.exports = CabinetDispatcher;
